@@ -18,7 +18,7 @@ public class Turn extends Command{
 	}
 	
 	@Override
-	protected void initialize() {
+	protected void execute() {
 		if(xBox.getX(Hand.kRight) > 0) {
 			driver.tankDrive(-0.5,.5);
 		}
