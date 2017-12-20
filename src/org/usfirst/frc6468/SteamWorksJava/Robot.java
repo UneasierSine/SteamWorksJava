@@ -17,8 +17,8 @@ public class Robot extends IterativeRobot {
     public static DriveBase driveBase;
     public static Ramp ramp;
     public static RobotDrive robotDrive = new RobotDrive(0, 1, 2, 3);
-    //public static GenericHID;
-    //GenericHID.hand;
+    
+    GenericHID.hand hand;
     
     public void robotInit() {
     RobotMap.init();
@@ -54,9 +54,11 @@ public class Robot extends IterativeRobot {
         if(xbox.getYButton == true){
             new RampUp();
         }
-        if(xbox.getX(GenericHID.hand)){
+        if(xbox.getX(hand.kRight) != 0){
+            new Turn();
         }
-        if(){
+        if(xbox.getY(hand.kRight) != 0){
+            new Move();
         }
     }
 
