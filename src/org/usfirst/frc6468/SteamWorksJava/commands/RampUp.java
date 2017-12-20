@@ -17,11 +17,9 @@ public class RampUp extends Command {
     }
 
     @Override
-	protected void initialize() {
-    	if(xBox.getYButton() != false) {
-    		rightServo.setAngle(250);
-    		leftServo.setAngle(60);
-    	}
+	protected void execute() {
+    	   rightServo.setAngle(250);
+    	   leftServo.setAngle(60);
     }
     
 	@Override
