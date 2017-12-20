@@ -8,7 +8,6 @@ import org.usfirst.frc6468.SteamWorksJava.RobotMap;
 
 public class RampDown extends Command{
 	
-	XboxController xBox = Robot.xbox;
 	Servo leftServo = RobotMap.rampLeftServo;
 	Servo rightServo = RobotMap.rampRightServo;
 
@@ -18,10 +17,8 @@ public class RampDown extends Command{
 	
 	@Override
 	protected void initialize() {
-		if(xBox.getAButton() != false) {
-			rightServo.setAngle(130);
-			leftServo.setAngle(170);
-		}
+		rightServo.setAngle(130);
+		leftServo.setAngle(170);
 	}
 
 	@Override
