@@ -8,6 +8,8 @@ import edu.wpi.first.wpilibj.livewindow.LiveWindow;
 import org.usfirst.frc6468.SteamWorksJava.commands.*;
 import org.usfirst.frc6468.SteamWorksJava.subsystems.*;
 import edu.wpi.first.wpilibj.XboxController;
+import edu.wpi.first.wpilibj.CameraServer;
+import edu.wpi.first.wpilibj.LiveWindow;
 
 public class Robot extends IterativeRobot {
 
@@ -18,10 +20,13 @@ public class Robot extends IterativeRobot {
     public static Ramp ramp;
     public static RobotDrive robotDrive = new RobotDrive(0, 1, 2, 3);
     
+    CameraServer.getInstance().startAutomaticCapture();
+    
     GenericHID.hand hand;
     
     public void robotInit() {
     RobotMap.init();
+        LiveWindow lw = LiveWindow.getInstance();
         ramp = new Ramp();
         autonomousCommand = new AutonomousCommand();
     }
