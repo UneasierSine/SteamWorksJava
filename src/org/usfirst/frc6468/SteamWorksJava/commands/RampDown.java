@@ -16,7 +16,7 @@ public class RampDown extends Command{
 	}
 	
 	@Override
-	protected void initialize() {
+	protected void execute() {
 		rightServo.setAngle(130);
 		leftServo.setAngle(170);
 	}
