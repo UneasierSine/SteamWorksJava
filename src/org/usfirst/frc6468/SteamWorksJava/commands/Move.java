@@ -18,7 +18,7 @@ public class Move extends Command{
 	}
 	
 	@Override
-	protected void initialize() {
+	protected void execute() {
 		double counter = 1;
 		double movement;
 		//executes a pattern of moving forward using a cubic function f(x)=(yAxis)(increment)^3
