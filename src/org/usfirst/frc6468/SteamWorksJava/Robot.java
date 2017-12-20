@@ -17,6 +17,8 @@ public class Robot extends IterativeRobot {
     public static DriveBase driveBase;
     public static Ramp ramp;
     public static RobotDrive robotDrive = new RobotDrive(0, 1, 2, 3);
+    //public static GenericHID;
+    //GenericHID.hand;
     
     public void robotInit() {
     RobotMap.init();
@@ -46,6 +48,16 @@ public class Robot extends IterativeRobot {
 
     public void teleopPeriodic() {
         Scheduler.getInstance().run();
+        if(xbox.getAButton == true){
+            new RampDown();
+        }
+        if(xbox.getYButton == true){
+            new RampUp();
+        }
+        if(xbox.getX(GenericHID.hand)){
+        }
+        if(){
+        }
     }
 
     public void testPeriodic() {
